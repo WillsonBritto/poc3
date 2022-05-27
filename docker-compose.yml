@@ -2,6 +2,9 @@ services:
   phpserver:
     image: meuphp
     build: ./build
+    ports:
+      - 80:80
+      - 443:443
     volumes:
       - ./www:/var/www/html
   database:
@@ -15,4 +18,5 @@ services:
     restart: always
     ports:
       - 8080:8080
-      - 443
+© 2022 GitHub, Inc.
+
